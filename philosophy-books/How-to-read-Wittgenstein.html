@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>How To Read Wittgenstein/title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .book-header {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .book-cover {
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .book-info {
+            flex: 1;
+        }
+        .book-info h2 {
+            margin-top: 0;
+        }
+        .book-info .author {
+            font-style: italic;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .action-button {
+            padding: 10px 15px;
+            background-color: #e96d00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;  /* Add this line to remove underline */
+        }
+        .action-button:hover {
+            background-color: #b55603;
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="../philosophy.htm">
+                    <i class="fas fa-brain"></i> Philosophy
+                </a></li>
+                <li><a href="../logic.html">
+                    <i class="fas fa-puzzle-piece"></i> Logic
+                </a></li>
+                <li><a href="../science.html">
+                    <i class="fas fa-flask"></i> Science
+                </a></li>
+                <li><a href="../novels.html">
+                    <i class="fas fa-book"></i> Novels
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <header>
+        </header>
+        <main role="main">
+            <div id="main">
+    <div id="book-reader">
+        <h1>How to Read Wittgenstein- Ray Monk</h1>
+        
+        <div class="book-header">
+            <img src="../book-covers/How to read Wiigenstein.jpg" alt="Causality: Models, Reasoning, and Inference by Judea Pearl" class="book-cover">
+            <div class="book-info">
+                <h2>Description </h2>
+                <span class="author">by Ray Monk (Author) </span>
+                <p style="color: #9b9393; line-height: 1.6; font-size: 16px; margin: 20px 0; text-align: justify; padding-right: 40px;">Approaching the writing of major intellectuals, artists, and philosophers need no longer be daunting. How to Read is a new sort of introduction--a personal master class in reading--that brings you face to face with the work of some of the most influential and challenging writers in history. In lucid, accessible language, these books explain essential topics such as Wittgenstein's determination to insist on the integrity and the autonomy of nonscientific forms of understanding.
+
+                    Though Wittgenstein wrote on the same subjects that dominate the work of other analytic philosophers ― the nature of logic, the limits of language, the analysis of meaning ― he did so in a peculiarly poetic style that separates his work sharply from that of his peers and makes the question of how to read him particularly pertinent.
+                    
+                    At the root of Wittgenstein's thought, Monk argues, is a determination to resist the scientism characteristic of our age, a determination to insist on the integrity and the autonomy of non-scientific forms of understanding. The kind of understanding we seek in philosophy, Wittgenstein tried to make clear, is similar to the kind we might seek of a person, a piece of music, or, indeed, of a poem.
+                    </p>
+                <div class="action-buttons">
+                    <a href="../philosophy.htm" class="action-button"><i class="fas fa-arrow-left"></i> Back to Philosophy</a>
+                </div><br><br>
+                <a href="https://drive.google.com/uc?export=download&id=1a7WaY3k7rtUo0YImCoKt8SeCFzIVoT9B" class="action-button"><i class="fas fa-download"></i>Download(PDF)</a>
+                <h1>Read on bellow &darr;</h1>
+
+            </div>
+        </div>
+        <p>
+        </p>
+        
+        <div class="book-content">
+            <div class="pdf-container" style="width: 100%; height: 800px;">
+                <iframe 
+                    src="https://drive.google.com/file/d/1a7WaY3k7rtUo0YImCoKt8SeCFzIVoT9B/preview" 
+                    width="70%" 
+                    height="70%" 
+                    allow="autoplay"
+                    frameborder="0">
+                </iframe>
+            </div>
+
+
+        <!-- Add contact form -->
+        <div class="contact-form">
+            <h1 style="text-align: center; color: #edaa8c;"> <strong>Contact Us If you want a real copy of the book</strong>  </h1>
+            <form id="contactForm" action="https://formspree.io/f/xldgyywr" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Johan Liebert">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="06 06 06 06 06">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Your book name here">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required placeholder="detail about the book ... "></textarea>
+                </div>
+                
+                <button type="submit"><strong>Send Message</strong> </button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
