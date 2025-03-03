@@ -1,0 +1,884 @@
+body {
+    background-color: #000; /* Pure black. */
+    color: #fff; /* Pure white. */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container {
+    width: auto;
+    max-width: 95%;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+}
+.logo figure{
+    margin:0;
+}
+
+
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+    height: auto;
+}
+.logoPHILOSOPHY img {
+    display: block;
+    margin: 0 auto;
+    max-width: 19%;
+    height: auto;
+}
+.logoSCIENCE img {
+    display: block;
+    margin: 0 auto;
+    max-width: 35%;
+    height: auto;
+}
+.logoLOGIC img {
+    display: block;
+    margin: 0 auto;
+    max-width: 23%;
+    height: auto;
+}
+.slogan, .latest {
+    color: #ccc; /*  Visible text, slightly greyed out */
+    text-align: center; /* Center the text */
+    margin: 5px 0; /* Some spacing */
+}
+#Authors{
+    color: #e96d00;
+}
+/* style latest even more*/
+.latest strong{
+    color:#fff;
+}
+.buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.buttons a {
+    background: rgb(255, 250, 250);  /* Same as book item background */
+    color: #000000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;  /* Rounded corners like download buttons */
+    margin: 0 5px;
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+    background: #e96d00    ;  /* Slightly lighter on hover */
+    transform: scale(1.05);  /* Slight grow effect */
+}
+
+/* unhide footer*/
+footer{
+   display:block; /* SHOW THE FOOTER AGAIN */
+    text-align: center; /* Center the footer content */
+    color: #ffffff; /* Greyed-out footer text */
+    padding-top:10px; /* add space between content*/
+
+}
+footer p, footer a {
+     border:none;
+    padding:3px 0;
+    margin:3px 0;
+    color:#ffffff;
+}
+header{
+     border:none;
+    padding:0;
+    margin:0;
+}
+img {
+    display: block; /* Make images block-level */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 40px; /* Ensure images don't overflow their container */
+    height: auto;    /* Maintain aspect ratio */
+    animation: fadeIn 2s ease-in;
+    -webkit-animation: fadeIn 2s ease-in;
+    -moz-animation: fadeIn 2s ease-in;
+    -o-animation: fadeIn 2s ease-in;
+    -ms-animation: fadeIn 2s ease-in;
+}
+
+/* Book list styling in philosophy.htm and science.htm */
+.book-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.book-item {
+    flex: 0 0 auto;
+    width: 200px; /* or your desired width */
+    margin-right: 20px;
+}
+
+.book-list li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.book-list a {
+    color: #000000; /* Link color */
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block; /* Make links block-like for padding */
+}
+
+.book-list a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+.book-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 20px;
+    animation: fadeIn 5s ease-in;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #e96d00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #fd9d4a;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.main-menu {
+    padding: 2rem 0;
+    margin-top: 30px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.menu-item {
+    background: rgba(22, 22, 22, 0.8);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: #e96d00;
+}
+
+.menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: white;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-icon {
+    transform: scale(1.1);
+}
+
+.menu-item h3 {
+    margin: 0 0 0.8rem 0;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.menu-item p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .menu-item {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #171616;
+    padding: 10px 0;
+    margin-top: 3rem;
+    border-top: 1px solid #e96d00;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #ffffff;  /* Change base color to white */
+    font-size: 24px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background: #333;  /* Darker background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 25px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    background: #e96d00;  /* Orange background on hover */
+}
+
+.social-links a:hover .fa-linkedin-in {
+    color: #ffffff;  /* White on hover */
+}
+
+.social-links a:hover .fa-instagram {
+    color: #ffffff;  /* White on hover */
+}
+
+.social-links a:hover .fa-x-twitter {
+    color: #ffffff;  /* White on hover */
+}
+
+footer p {
+    margin: 10px 0;
+    color: #666;
+}
+
+footer a {
+    color: #fefefe;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e96d00;
+}
+
+.license {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    opacity: 7;
+    transition: opacity 3s;
+}
+
+#scrollToTop:hover {
+    opacity: 10;
+    background-color: #ddd;
+}
+.book-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    height: auto;
+    overflow: hidden; /* Prevent content from spilling out */
+}
+
+.book-list-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 20px 40px; /* Add padding for scroll buttons */
+    position: relative;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    scroll-behavior: smooth;
+    cursor: default; /* Add default cursor */
+}
+
+.book-list {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(71, 71, 71, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.scroll-btn:hover {
+    background: rgba(233, 109, 0, 0.9);
+    opacity: 1;
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.book-list-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.book-list-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.book-list-wrapper::-webkit-scrollbar-thumb {
+    background: #e96d00;
+    border-radius: 3px;
+}
+
+.book-list-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #ff7700;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-item img {
+    width: 180px; /* Reduced width */
+    height: 260px; /* Reduced height */
+    object-fit: cover; 
+    margin-bottom: 8px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+.book-item h3 {
+    font-size: 1rem; /* Slightly smaller font */
+    margin: 8px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.book-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.book-item .botona {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: small !important;
+    background: #111112;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.book-item .botona:hover {
+    background: #e96d00;
+    transform: scale(1.05);
+}
+
+.scroll-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* In case there are many dots */
+    padding: 10px;
+}
+
+.scroll-dot {
+    width: 10px;  /* Slightly smaller to accommodate more dots */
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-dot:hover {
+    background-color: rgba(233, 109, 0, 0.5);
+}
+
+.scroll-dot.active {
+    background-color: #e96d00;
+    transform: scale(1.2);
+}
+
+.top-social-links {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.top-social-links a {
+    color: #ffffff;  /* White icons */
+    font-size: 18px;  /* Slightly smaller */
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);  /* Semi-transparent background */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);  /* Adds a frosted glass effect */
+    opacity: 0.6;  /* Makes the whole button more transparent */
+}
+
+.top-social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 1;  /* Full opacity on hover */
+    background: rgba(255, 255, 255, 0.2);  /* Slightly more visible on hover */
+}
+
+.top-social-links a:hover .fa-linkedin-in {
+    color: #0077b5;
+}
+
+.top-social-links a:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.top-social-links a:hover .fa-x-twitter {
+    color: #ffffff;
+}
+
+/* Hide fixed social icons when scrolling on mobile */
+@media (max-width: 768px) {
+    .top-social-links {
+        position: absolute; /* Change from fixed to absolute */
+        opacity: 0; /* Hide by default on mobile */
+        transition: opacity 0.3s ease;
+    }
+
+    /* Only show when at the top of the page */
+    body.at-top .top-social-links {
+        opacity: 1;
+    }
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.quote-line {
+    height: 2px;
+    background-color: #e96d00; /* Changed to a teal/mint color */
+    margin: 15px auto;
+}
+
+.quote-container blockquote {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 20px;
+    position: relative;
+    color: #ffffff    ; /* Dark text color */
+}
+
+.quote-container blockquote::before {
+    content: '"';
+    font-size: 4em;
+    color: #e96d00; /* Matching teal/mint color */
+    position: absolute;
+    left: -20px;
+    top: -40px;
+}
+
+.quote-container blockquote::after {
+    content: '"';
+    font-size: 4em;
+    color: #e96d00; /* Matching teal/mint color */
+    position: absolute;
+    right: -20px;
+    bottom: -70px;
+}
+
+.quote-container cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    color: #e96d00; /* Subtle grey for citation */
+    text-align: right;
+    padding-right: 50px;
+}
+
+.intro-paragraph {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1em;
+    padding: 20px;
+    animation: fadeIn 5s ease-in;
+}
+
+.intro-paragraph .free-download {
+    color: #e96d00;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.download-button{
+   
+    color: #ac74d6;
+}
+.intro-paragraph .free-download:hover {
+    color: #ff7700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Changed from 0.95 to 0.7 for more transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow opacity */
+    z-index: 1000;
+}
+
+.sticky-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sticky-nav li {
+    margin: 0 15px;
+}
+
+.sticky-nav a {
+    color: #ffffff; /* Changed to orange */
+    text-decoration: none;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.sticky-nav a:hover {
+    color: #e96d00; /* Lighter orange on hover */
+}
+
+.sticky-nav i {
+    font-size: 1em;
+    color: #e96d00; /* Making sure icons are also orange */
+}
+
+.search-wrapper {
+    width: 100%;
+    padding: 20px 0;
+    /*background: linear-gradient(to right, rgba(250, 247, 247, 0), rgba(233, 109, 0, 0.1), rgba(0,0,0,0)); */
+
+
+}
+
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    
+}
+
+.search-input-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.search-results-dropdown {
+    width: 100%;
+    margin-top: 10px; /* Space between search bar and results */
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-result-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background: #3a3a3a;
+}
+
+.search-result-item mark {
+    background: #e96d00;
+    color: white;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.search-result-item .result-category {
+    color: #888;
+    font-size: 0.9em;
+    margin-left: auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid #e7e2dd;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    color: #c6cdd1;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff7700;
+    background: rgba(241, 240, 240, 0.1);
+    box-shadow: 0 0 20px rgba(239, 237, 236, 0.2);
+}
+
+.search-button {
+    background: url();
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background: #ff7700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(252, 252, 252, 0.3);
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .search-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Add to your index.css file */
+.botona.read-online {
+    display: none;
+}
+
+.book-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.book-metadata {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.book-chapters {
+    margin: 2rem 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e96d00;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 1rem 0;
+}

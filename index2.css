@@ -1,0 +1,775 @@
+body {
+    background-color: #000; /* Pure black. */
+    color: #fff; /* Pure white. */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container {
+    width: auto;
+    max-width: 95%;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+}
+.logo figure{
+    margin:0;
+}
+
+
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+    height: auto;
+}
+.logoPHILOSOPHY img {
+    display: block;
+    margin: 0 auto;
+    max-width: 19%;
+    height: auto;
+}
+.logoSCIENCE img {
+    display: block;
+    margin: 0 auto;
+    max-width: 15%;
+    height: auto;
+}
+/* KEEP THE TEXT, YOU IDIOT (that's me) */
+.slogan, .latest {
+    /* display: none;  REMOVED THIS SHIT */
+    color: #ccc; /*  Visible text, slightly greyed out */
+    text-align: center; /* Center the text */
+    margin: 5px 0; /* Some spacing */
+}
+#Authors{
+    color: #e96d00;
+}
+/* style latest even more*/
+.latest strong{
+    color:#fff;
+}
+.buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.buttons a {
+    background: rgb(255, 250, 250);  /* Same as book item background */
+    color: #000000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;  /* Rounded corners like download buttons */
+    margin: 0 5px;
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+    background: #e96d00    ;  /* Slightly lighter on hover */
+    transform: scale(1.05);  /* Slight grow effect */
+}
+
+/* unhide footer*/
+footer{
+   display:block; /* SHOW THE FOOTER AGAIN */
+    text-align: center; /* Center the footer content */
+    color: #ffffff; /* Greyed-out footer text */
+    padding-top:20px; /* add space between content*/
+
+}
+footer p, footer a {
+     border:none;
+    padding:3px 0;
+    margin:3px 0;
+    color:#ffffff;
+}
+header{
+     border:none;
+    padding:0;
+    margin:0;
+}
+img {
+    display: block; /* Make images block-level */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 40px; /* Ensure images don't overflow their container */
+    height: auto;    /* Maintain aspect ratio */
+    animation: fadeIn 2s ease-in;
+    -webkit-animation: fadeIn 2s ease-in;
+    -moz-animation: fadeIn 2s ease-in;
+    -o-animation: fadeIn 2s ease-in;
+    -ms-animation: fadeIn 2s ease-in;
+}
+
+/* Book list styling in philosophy.htm and science.htm */
+.book-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    text-align: center;
+    ; /* Center list items */
+}
+
+
+.book-list li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.book-list a {
+    color: #000000; /* Link color */
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block; /* Make links block-like for padding */
+}
+
+.book-list a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 20px;
+    animation: fadeIn 5s ease-in;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #e96d00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #fd9d4a;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.main-menu {
+    padding: 2rem 0;
+    margin-top: 30px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-item {
+    background: rgba(45, 44, 44, 0.8);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(233, 109, 0, 0.2);
+}
+
+.menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: rgba(233, 109, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-icon {
+    transform: scale(1.1);
+}
+
+.menu-item h3 {
+    margin: 0 0 0.8rem 0;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.menu-item p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .menu-item {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #171616;
+    padding: 40px 0;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 25px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.social-links a:hover .fa-linkedin-in {
+    color: #0077b5;
+}
+
+.social-links a:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.social-links a:hover .fa-x-twitter {
+    color: #000000;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #666;
+}
+
+footer a {
+    color: #fefefe;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e96d00;
+}
+
+footer img {
+    max-width: 150px;
+    height: auto;
+    margin: 15px 0;
+}
+
+.license {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    opacity: 7;
+    transition: opacity 3s;
+}
+
+#scrollToTop:hover {
+    opacity: 10;
+    background-color: #ddd;
+}
+.book-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    height: auto;
+}
+
+.book-list-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 20px;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.book-list-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;  /* Reduced padding further */
+    border-radius: 15px;
+    background: rgb(45, 44, 44); /* Made background darker/smaller grey */
+    min-width: 240px;  /* Reduced min-width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    transition: transform 0.2s ease;
+    width: 200px;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-item img {
+    width: 180px; /* Reduced width */
+    height: 260px; /* Reduced height */
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    max-width: 100%;
+}
+
+.book-item h3 {
+    font-size: 1rem; /* Slightly smaller font */
+    margin: 8px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.book-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.book-item .botona {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: #111112;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.book-item .botona:hover {
+    background: #e96d00;
+    transform: scale(1.05);
+}
+
+.scroll-btn {
+    background: rgba(71, 71, 71, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-btn:hover {
+    background: rgba(126, 126, 126, 0.7);
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
+.scroll-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.scroll-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-dot.active {
+    background-color: #fff;
+}
+
+.top-social-links {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.top-social-links a {
+    color: #ffffff;  /* White icons */
+    font-size: 18px;  /* Slightly smaller */
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);  /* Semi-transparent background */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);  /* Adds a frosted glass effect */
+    opacity: 0.6;  /* Makes the whole button more transparent */
+}
+
+.top-social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 1;  /* Full opacity on hover */
+    background: rgba(255, 255, 255, 0.2);  /* Slightly more visible on hover */
+}
+
+.top-social-links a:hover .fa-linkedin-in {
+    color: #0077b5;
+}
+
+.top-social-links a:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.top-social-links a:hover .fa-x-twitter {
+    color: #ffffff;
+}
+
+/* Hide fixed social icons when scrolling on mobile */
+@media (max-width: 768px) {
+    .top-social-links {
+        position: absolute; /* Change from fixed to absolute */
+        opacity: 0; /* Hide by default on mobile */
+        transition: opacity 0.3s ease;
+    }
+
+    /* Only show when at the top of the page */
+    body.at-top .top-social-links {
+        opacity: 1;
+    }
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.quote-line {
+    height: 2px;
+    background-color: #e96d00; /* Changed to a teal/mint color */
+    margin: 15px auto;
+}
+
+.quote-container blockquote {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 20px;
+    position: relative;
+    color: #ffffff    ; /* Dark text color */
+}
+
+.quote-container blockquote::before {
+    content: '"';
+    font-size: 4em;
+    color: #e96d00; /* Matching teal/mint color */
+    position: absolute;
+    left: -20px;
+    top: -40px;
+}
+
+.quote-container blockquote::after {
+    content: '"';
+    font-size: 4em;
+    color: #e96d00; /* Matching teal/mint color */
+    position: absolute;
+    right: -20px;
+    bottom: -70px;
+}
+
+.quote-container cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    color: #e96d00; /* Subtle grey for citation */
+    text-align: right;
+    padding-right: 50px;
+}
+
+.intro-paragraph {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1em;
+    padding: 20px;
+    animation: fadeIn 5s ease-in;
+}
+
+.intro-paragraph .free-download {
+    color: #e96d00;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.intro-paragraph .free-download:hover {
+    color: #ff7700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Changed from 0.95 to 0.7 for more transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow opacity */
+    z-index: 1000;
+}
+
+.sticky-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sticky-nav li {
+    margin: 0 15px;
+}
+
+.sticky-nav a {
+    color: #ffffff; /* Changed to orange */
+    text-decoration: none;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.sticky-nav a:hover {
+    color: #e96d00; /* Lighter orange on hover */
+}
+
+.sticky-nav i {
+    font-size: 1em;
+    color: #e96d00; /* Making sure icons are also orange */
+}
+
+.search-wrapper {
+    width: 100%;
+    padding: 20px 0;
+    /*background: linear-gradient(to right, rgba(250, 247, 247, 0), rgba(233, 109, 0, 0.1), rgba(0,0,0,0)); */
+
+
+}
+
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid #e7e2dd;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    color: #c6cdd1;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff7700;
+    background: rgba(241, 240, 240, 0.1);
+    box-shadow: 0 0 20px rgba(239, 237, 236, 0.2);
+}
+
+.search-button {
+    background: url();
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background: #ff7700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(252, 252, 252, 0.3);
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .search-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

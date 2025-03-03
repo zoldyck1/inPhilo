@@ -1,0 +1,11 @@
+{
+    "novels": [
+        {
+            "title": "Novel Title 1",
+            "author": "Author Name",
+            "coverUrl": "https://your-cdn.com/covers/novel1.jpg",
+            "pdfUrl": "https://your-cdn.com/pdfs/novel1.pdf",
+            "category": "fiction"
+        }
+    ]
+}
