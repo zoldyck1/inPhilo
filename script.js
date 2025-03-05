@@ -311,6 +311,36 @@ function initializeBookScroller(containerId, leftBtnId, rightBtnId, indicatorsId
         }
     });
 
+    // Add touch scroll handling
+    let touchStart = null;
+    let touchX = null;
+
+    bookList.addEventListener('touchstart', (e) => {
+        touchStart = e.touches[0].clientX;
+        touchX = touchStart;
+        bookList.style.scrollBehavior = 'auto';
+    }, { passive: true });
+
+    bookList.addEventListener('touchmove', (e) => {
+        if (!touchStart) return;
+
+        const currentX = e.touches[0].clientX;
+        const diff = touchX - currentX;
+        touchX = currentX;
+
+        scrollPosition += diff;
+        bookList.scrollLeft = scrollPosition;
+        lastScrollLeft = scrollPosition;
+
+        updateScrollButtons();
+        updateScrollDots();
+    }, { passive: true });
+
+    bookList.addEventListener('touchend', () => {
+        touchStart = null;
+        bookList.style.scrollBehavior = 'smooth';
+    }, { passive: true });
+
     // Reset scroll behavior for button clicks
     scrollLeftBtn.addEventListener('click', () => {
         bookList.style.scrollBehavior = 'smooth';
