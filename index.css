@@ -882,3 +882,38 @@ footer a:hover {
     border-radius: 4px;
     margin: 1rem 0;
 }
+
+/* Mobile-specific book styles */
+@media screen and (max-width: 768px) {
+    .book-item {
+        transform: scale(0.85); /* Make entire book item slightly smaller */
+    }
+
+    .book-item img {
+        width: 130px; /* Smaller width for phones */
+        height: 190px; /* Proportionally smaller height */
+    }
+
+    .book-list {
+        gap: 10px; /* Reduce gap between books */
+    }
+
+    .book-item h3 {
+        font-size: 0.9rem; /* Smaller title text */
+    }
+
+    .book-item .botona {
+        padding: 8px 16px; /* Smaller button */
+        font-size: 0.8rem;
+    }
+
+    .book-list-wrapper {
+        padding: 10px 30px; /* Smaller padding */
+    }
+
+    .scroll-btn {
+        width: 30px; /* Smaller scroll buttons */
+        height: 30px;
+        font-size: 16px;
+    }
+}
