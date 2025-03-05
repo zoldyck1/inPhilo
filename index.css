@@ -183,6 +183,8 @@ img {
     padding: 8px;
     margin-bottom: 10px;
     min-height: 100px;
+    background-color: white;
+    
 }
 
 button[type="submit"] {
